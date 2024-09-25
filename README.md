@@ -30,11 +30,12 @@ To add the newly created SSH key to your DigitalOcean account, follow these step
 7. Click **Add SSH Key**.
 
 ## Step 2: Add a Custom Arch Linux Image
-Next, you will add a custom Arch Linux image to your DigitalOcean account.
+Next, you will add a custom Arch Linux image to your DigitalOcean account. This is the Operating System the droplet will use.
 
 ### 2.1 Download the Arch Linux Image
 1. Visit the [Arch Linux download page](https://gitlab.archlinux.org/archlinux/arch-boxes/-/packages/).
 2. Select and download the latest version of the Arch Linux-cloudimg .qcow file.
+![screenshot4](/images/screenshot4.jpg)
 
 ### 2.2 Upload the Image to DigitalOcean
 1. In your DigitalOcean dashboard, navigate to the **Backups & Snapshots** section.
@@ -43,7 +44,7 @@ Next, you will add a custom Arch Linux image to your DigitalOcean account.
 ![screenshot3](/images/screenshot3.jpg)
 
 ## Step 3: Set up a Droplet Running Arch Linux
-Now that you have your custom image uploaded, you can create a Droplet.
+Now that you have your custom image uploaded, you can create a Droplet. Droplets are Linux based VMs that run on virtualized hardware. (DigitalOcean Droplets)
 
 ### 3.1 Create the Droplet
 1. Go to the **Droplets** section in your DigitalOcean dashboard.
@@ -99,3 +100,6 @@ ssh -i .ssh/do-key arch@your_droplet_ip
 ```
 
 Replace your_droplet_ip with the actual IP address of your Droplet
+
+## References
+DigitalOcean droplets: Scalable cloud compute starting at $4/MO. DigitalOcean Droplets | Scalable Cloud Compute Starting at $4/mo. (n.d.). https://www.digitalocean.com/products/droplets 
