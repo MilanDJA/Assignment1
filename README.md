@@ -41,7 +41,7 @@ Next, you will add a custom Arch Linux image to your DigitalOcean account.
 2. Click on **Custom Images**.
 3. Select **Upload Image** and follow the prompts to upload your Arch Linux ISO.
 
-## Step 3: Create a Droplet Running Arch Linux
+## Step 3: Set up a Droplet Running Arch Linux
 Now that you have your custom image uploaded, you can create a Droplet.
 
 ### 3.1 Create the Droplet
@@ -50,9 +50,7 @@ Now that you have your custom image uploaded, you can create a Droplet.
 3. Choose the **Arch Linux** image from the **Custom Images** tab.
 4. Select the plan, data center region, and additional options as needed.
 5. Under the **Authentication** section, choose **SSH Keys** and select the key you added earlier.
-6. Click **Create Droplet**.
-Once finished it should look something like this
-![sceenshot](/images/screenshot1.jpg)
+
 
 ## Step 4: Configure Cloud-Init
 To automate the initial setup tasks, you will create a cloud-init configuration file.
@@ -65,7 +63,7 @@ Create a new file named `cloud-config.yml` with the following content:
 users:
   - name: newuser
     ssh-authorized-keys:
-      - ssh-rsa AAAAB3... your_key_here
+      - ssh-ed25519 your_key_here
     sudo: ['ALL=(ALL) NOPASSWD:ALL']
     shell: /bin/bash
 packages:
@@ -75,19 +73,28 @@ disable_root: true
 ```
 
 ### 4.2 Add Cloud-Init to the Droplet
-1. When creating the Droplet, find the **User Data** field.
-2. Place your `cloud-config.yml` content into this field.
+1. When creating the Droplet, find the **Advanced Options** field.
+2. Click **Add Initialization Scripts**
+3. Place your `cloud-config.yml` content into this field.
+![screenshot2](/images/screenshot2.jpg)
+
+### 4.3 Finalize the Droplet
+Click **Create Droplet**.
+Once finished it should look something like this
+![screenshot](/images/screenshot1.jpg)
 
 ## Step 5: Connect to Your Droplet Using SSH
 After your Droplet is created, connect to it using SSH.
 
-### 5.1 Create the Cloud-Init Configuration File
+### 5.1 Find the droplet IP
 1. Go to the Droplets section in your DigitalOcean dashboard.
 2. Locate your new Droplet and note its public IP address.
 
 ### 5.2 Connect via SSH
 In your terminal, run the following command to connect to your Droplet:
 
-ssh newuser@your_droplet_ip
+```bash
+ssh -i .ssh/do-key arch@your_droplet_ip
+```
 
 Replace your_droplet_ip with the actual IP address of your Droplet
