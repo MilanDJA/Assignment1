@@ -40,6 +40,7 @@ Next, you will add a custom Arch Linux image to your DigitalOcean account.
 1. In your DigitalOcean dashboard, navigate to the **Backups & Snapshots** section.
 2. Click on **Custom Images**.
 3. Select **Upload Image** and follow the prompts to upload your Arch Linux ISO.
+![screenshot3](/images/screenshot3.jpg)
 
 ## Step 3: Set up a Droplet Running Arch Linux
 Now that you have your custom image uploaded, you can create a Droplet.
