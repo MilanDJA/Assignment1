@@ -2,12 +2,22 @@
 
 # Tutorial: Setting Up an Arch Linux Server on DigitalOcean (Level 2)
 
+## Table of Contents
+1. Prerequisites
+2. Generate SSH Keys
+3. Add Custom Arch Linux 
+4. Set up a droplet
+5. Configure Cloud-Init
+6. Connect to Droplet using SSH
+7. References
+
 ## Prerequisites
 Before starting, ensure you:
 - Have a DigitalOcean account.
+- Be familiar with the basics of Linux
 
-## Step 1: Generate SSH Keys
-SSH keys provide a more secure way to connect to your server than using a password. Follow these steps to generate SSH keys:
+## Step 1: Generate SSH Keys 
+SSH keys provide a more secure way to connect to your server than using a password. Follow these steps to generate SSH keys and add them to your digitalocean account:
 
 ### 1.1 Generate SSH Keys on Your Local Machine
 Open your terminal and run the following command to generate SSH keys:
@@ -54,6 +64,7 @@ Now that you have your custom image uploaded, you can create a Droplet. Droplets
 3. Choose the **Arch Linux** image from the **Custom Images** tab.
 4. Select the plan, data center region, and additional options as needed.
 5. Under the **Authentication** section, choose **SSH Keys** and select the key you added earlier.
+6. Don't click **Create Droplet** at the bottom yet, instead move on to the next step of the guide.
 
 
 ## Step 4: Configure Cloud-Init
@@ -104,7 +115,9 @@ In your terminal, run the following command to connect to your Droplet:
 ssh -i .ssh/do-key arch@your_droplet_ip
 ```
 
-Replace your_droplet_ip with the actual IP address of your Droplet
+Replace your_droplet_ip with the actual IP address of your Droplet\
+
+Congratulations you have successfuly set up and connected to a droplet using SSH.
 
 ## References
 1. DigitalOcean droplets: https://www.digitalocean.com/products/droplets 
