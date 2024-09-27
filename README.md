@@ -46,9 +46,9 @@ Next, you will add a custom Arch Linux image to your DigitalOcean account. This 
 ![screenshot3](/images/screenshot3.jpg)
 
 ## Step 3: Set up a Droplet Running Arch Linux
-Now that you have your custom image uploaded, you can create a Droplet. Droplets are Linux based VMs that run on virtualized hardware. (DigitalOcean Droplets)
+Now that you have your custom image uploaded, you can create a Droplet. Droplets are Linux based VMs that run on virtualized hardware. 
 
-### 3.1 Create the Droplet
+### 3.1 Set up the Droplet
 1. Go to the **Droplets** section in your DigitalOcean dashboard.
 2. Click **Create Droplet**.
 3. Choose the **Arch Linux** image from the **Custom Images** tab.
@@ -58,9 +58,12 @@ Now that you have your custom image uploaded, you can create a Droplet. Droplets
 
 ## Step 4: Configure Cloud-Init
 To automate the initial setup tasks, you will create a cloud-init configuration file.
+Cloud-init is a tool used to automate the initialization and configuration of cloud instances during their first boot.
+A cloud-init configuration file, allows users to define settings such as creating a new user, configuring SSH access, installing necessary packages, and disabling root login. 
+This helps streamline server setup by automating key configurations.
 
 ### 4.1 Create the Cloud-Init Configuration File
-Create a new file named `cloud-config.yml` with the following content:
+To get started create a new file named `cloud-config.yml` with the following content:
 
 ```yaml
 #cloud-config
@@ -105,3 +108,6 @@ Replace your_droplet_ip with the actual IP address of your Droplet
 
 ## References
 DigitalOcean droplets: Scalable cloud compute starting at $4/MO. DigitalOcean Droplets | Scalable Cloud Compute Starting at $4/mo. (n.d.). https://www.digitalocean.com/products/droplets 
+Introduction to cloud init: https://docs.cloud-init.io/en/latest/explanation/introduction.html
+What is ssh: https://www.cloudflare.com/learning/access-management/what-is-ssh/
+Arch Linux Documentation: https://wiki.archlinux.org/title/Main_page
