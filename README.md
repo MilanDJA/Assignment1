@@ -16,7 +16,9 @@ Open your terminal and run the following command to generate SSH keys:
 ssh-keygen -t ed25519 -f ~/.ssh/do-key -C "your_email@examplemail.com"
 ```
 
-When prompted to save the file, press **Enter** to use the default location (`~/.ssh/do-key`). You’ll be asked to create a passphrase for additional security. Afterward, the SSH key pair will be generated.
+The command above generates two plaintext files
+* "do-key" the private key
+* "do-key.pub" the public key that needs to be copied to the server
 
 ### 1.2 Add the SSH Key to Your DigitalOcean Account
 To add the newly created SSH key to your DigitalOcean account, follow these steps:
