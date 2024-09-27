@@ -14,7 +14,7 @@
 ## Prerequisites
 Before starting, ensure you:
 - Have a DigitalOcean account.
-- Be familiar with the basics of Linux
+- Are familiar with the basics of Linux
 
 ## Step 1: Generate SSH Keys 
 SSH keys provide a more secure way to connect to your server than using a password. Follow these steps to generate SSH keys and add them to your digitalocean account:
