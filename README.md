@@ -107,7 +107,7 @@ ssh -i .ssh/do-key arch@your_droplet_ip
 Replace your_droplet_ip with the actual IP address of your Droplet
 
 ## References
-1. DigitalOcean droplets: Scalable cloud compute starting at $4/MO. DigitalOcean Droplets | Scalable Cloud Compute Starting at $4/mo. (n.d.). https://www.digitalocean.com/products/droplets 
+1. DigitalOcean droplets: https://www.digitalocean.com/products/droplets 
 2. Introduction to cloud init: https://docs.cloud-init.io/en/latest/explanation/introduction.html
 3. What is ssh: https://www.cloudflare.com/learning/access-management/what-is-ssh/
 4. Arch Linux Documentation: https://wiki.archlinux.org/title/Main_page
